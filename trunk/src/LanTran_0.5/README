@@ -1,0 +1,32 @@
+//---------------------------------------------------------
+// Date:    2010-05-22	2010-05-23
+// Version: 0.5
+// Author:  clzqwdy@gmail.com
+// Name:    LanTran
+//
+// Goals:
+// 1. 在08创新杯的基础上整理，弄出更清晰的思路和文档；
+// 2. 给彭玉静的毕业设计；
+//
+// Features:
+// 1. 重命名了一些函数名称，使之更符合它的功能
+//	1)	m_listenSocket		---->		m_LanShowSocket
+//	2) 	tagClientInfo		---->		tagLanShowData
+//	   	ClientInfo			---->		LanShowData
+//	   	pClientInfo			---->		pLanShowData
+//	3) 	tagManClientInfo	---->		tagClientInfo
+//	   	ManClientInfo		---->		ClientInfo
+//	   	pManClientInfo		---->		ClientInfo
+//	4) 	StartServerThread()	---->		StartLanShow()
+//	5) 	ServerAcceptThread()---->		LanShowThread()
+//	6) 	IniListenSocket()	---->		InitLanShowSocket()
+//	7) 	IniManClientInfo()	---->		InitMyClientInfo()
+//	8) 	RecvClientData()	---->		RecvLanShowData()
+//	9) 	SendToClient()		---->		SendLanShowData()
+//	10)	ANENTRY				---->		ONLINE
+//
+//	2. 在资源描述文件中增加了一些版本信息VS_VERSION_INFO
+//---------------------------------------------------------
+
+
+
