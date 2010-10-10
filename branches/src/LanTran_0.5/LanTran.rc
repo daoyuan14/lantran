@@ -1,0 +1,369 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\LanTran.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\LanTran.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\快速传输.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\加密传输.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\关联杀毒.ico"
+IDI_ICON4               ICON    DISCARDABLE     "res\\在线聊天.ico"
+IDI_ICON5               ICON    DISCARDABLE     "res\\语音聊天.ico"
+IDI_FILE1               ICON    DISCARDABLE     "res\\第一个被拖进去的文件.ICO"
+IDI_FILE2               ICON    DISCARDABLE     "res\\第二个被拖进去的文件.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 300, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 LanTran"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,40,21,21
+    LTEXT           "LanTran 2.3 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2008 南京邮电大学",IDC_STATIC,40,80,129,8
+    DEFPUSHBUTTON   "确定",IDOK,243,43,50,14,BS_FLAT | WS_GROUP
+    LTEXT           "发现该软件的Bug，请联系作者：",IDC_STATIC,40,25,124,8
+    LTEXT           "吴道远   B07030313    clzqwdy@gmail.com",IDC_STATIC,40,
+                    43,162,8
+    LTEXT           "姚焕章   B07030323    125409446@qq.com",IDC_STATIC,40,
+                    59,157,8
+END
+
+IDD_LANTRAN_DIALOG DIALOGEX 0, 0, 347, 305
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "局域网多功能数据传输器LanTran"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "刷新",IDC_BUTTON_NEW,295,30,40,14,BS_FLAT
+    PUSHBUTTON      "隐藏",IDC_BUTTON_HIDE,295,75,40,14,BS_FLAT
+    LTEXT           "在线用户列表",IDC_STATIC,130,5,50,8
+    CONTROL         "List1",IDC_LIST2,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,10,15,270,85,WS_EX_TRANSPARENT
+    LTEXT           "",IDC_STATIC_DLG,10,125,325,170
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",TCS_FIXEDWIDTH,5,105,
+                    335,195
+END
+
+IDD_DIALOG_FILETRAN DIALOGEX 0, 0, 326, 169
+STYLE WS_CHILD
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "发送文件",IDC_BUTTON_SENDFILE,195,130,40,15,BS_FLAT
+    PUSHBUTTON      "选择文件",IDC_BUTTON_SELECTFILE,80,130,40,15,BS_FLAT
+    CONTROL         "List1",IDC_LIST_FILE,"SysListView32",WS_BORDER | 
+                    WS_TABSTOP,10,10,305,115,WS_EX_ACCEPTFILES
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,10,148,302,12
+END
+
+IDD_DIALOG_SAFETRAN DIALOG DISCARDABLE  0, 0, 326, 171
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "加密传输",IDC_STATIC,5,0,120,85
+    GROUPBOX        "解密文件",IDC_STATIC,5,85,121,85
+    LTEXT           "待加密文件：",IDC_STATIC_ENCRYPT,10,15,49,12
+    PUSHBUTTON      "选择文件",IDC_BUTTON_ENSELECT,74,13,37,13,BS_FLAT
+    LTEXT           "使用口令加密:",IDC_STATIC,10,55,52,10
+    EDITTEXT        IDC_EDIT_KEYEN,63,53,55,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "加密发送",IDC_BUTTON_KEYSEND,43,69,37,13,BS_FLAT
+    LTEXT           "不用口令加密:",IDC_STATIC,10,35,55,10
+    PUSHBUTTON      "加密发送",IDC_BUTTON_NOKEYSEND,74,34,37,13,BS_FLAT
+    LTEXT           "待解密文件：",IDC_STATIC_DECRYPT,10,101,52,11
+    PUSHBUTTON      "选择文件",IDC_BUTTON_DESELECT,74,97,37,13,BS_FLAT
+    LTEXT           "使用口令解密：",IDC_STATIC,10,137,56,10
+    PUSHBUTTON      "解密",IDC_BUTTON_KEYDECRYPT,43,149,37,13,BS_FLAT
+    EDITTEXT        IDC_EDIT_KEYDE,67,135,55,12,ES_AUTOHSCROLL
+    LTEXT           "不用口令解密：",IDC_STATIC,10,116,57,10
+    PUSHBUTTON      "解密",IDC_BUTTON_NOKEYDECRYPT,74,113,37,13,BS_FLAT
+    GROUPBOX        "使用图片加密文本文件",IDC_STATIC,128,0,191,170
+    CONTROL         "",IDC_PICTURE,"Static",SS_BLACKFRAME,143,32,166,110
+    LTEXT           "需要加密的文件：",IDC_STATIC,143,147,69,10
+    EDITTEXT        IDC_EDFILEPATH,215,145,59,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "请选择",IDC_BTADDFILE,283,145,30,13,BS_FLAT
+    EDITTEXT        IDC_EDPICPATH,143,15,75,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "选择图片",IDC_BTSELECTPIC,233,14,37,13,BS_FLAT
+    PUSHBUTTON      "加密解密",IDC_BTENCRY,280,14,37,13,BS_FLAT
+END
+
+IDD_DIALOG_ANTIVIRUS DIALOG DISCARDABLE  0, 0, 326, 171
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "病毒扫描软件名：",IDC_STATIC,55,40,70,10
+    EDITTEXT        IDC_EDIT_ANTISOFT,55,55,215,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "关联杀毒",IDC_BUTTON_ANTIOK,90,115,55,15,BS_FLAT
+    PUSHBUTTON      "取消关联",IDC_BUTTON_ANTICANCEL,185,115,55,15,BS_FLAT
+    PUSHBUTTON      "浏览",IDC_BUTTON_BROWSE,225,35,45,15,BS_FLAT
+    LTEXT           "现在的关联状态：",IDC_STATIC,115,85,65,10
+    LTEXT           "关联",IDC_STATIC_ISANTI,185,85,30,10
+END
+
+IDD_DIALOG_CHAT DIALOG DISCARDABLE  0, 0, 326, 171
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "聊天内容",IDC_STATIC,5,0,315,85
+    GROUPBOX        "消息编辑框",IDC_STATIC,5,90,315,50
+    PUSHBUTTON      "发送消息",IDC_BUTTON_SENDCHAT,195,150,45,15,BS_FLAT
+    PUSHBUTTON      "清空聊天内容",IDC_BUTTON_CLEAR,65,150,55,15,BS_FLAT
+    EDITTEXT        IDC_EDIT_RECEIVE,5,10,315,75,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_NOHIDESEL | ES_READONLY | 
+                    ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_SANDCHAT,5,100,315,40,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_NOHIDESEL | ES_WANTRETURN | 
+                    WS_VSCROLL
+END
+
+IDD_DIALOG_PHONE DIALOG DISCARDABLE  0, 0, 311, 171
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "输入要连接的IP或建立主机",IDC_STATIC,183,13,109,38
+    GROUPBOX        "输入聊天端口号",IDC_STATIC,204,57,88,29
+    EDITTEXT        IDC_PORT,212,67,71,15,ES_AUTOHSCROLL
+    CONTROL         "IPAddress1",IDC_IPADDRESS,"SysIPAddress32",WS_TABSTOP,
+                    191,27,90,15
+    PUSHBUTTON      "连接主机",IDC_CONNECTSERVER,72,65,54,18,BS_FLAT
+    PUSHBUTTON      "建立主机",IDC_SETSERVER,7,66,54,18,BS_FLAT
+    PUSHBUTTON      "语音聊天",IDC_NEWSEND,135,65,54,18,BS_FLAT
+    EDITTEXT        IDC_INPUTTEXT,7,90,75,12,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_WANTRETURN | NOT WS_VISIBLE
+    EDITTEXT        IDC_SHOWTEXT,7,14,167,49,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    CONTROL         "Slider1",IDC_CONTROL,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,14,117,271,21
+    GROUPBOX        "音量",IDC_STATIC,7,98,285,53
+    GROUPBOX        "简单消息输入",IDC_STATIC,7,85,94,13,NOT WS_VISIBLE
+    PUSHBUTTON      "发送语音",IDC_SOUND,193,90,50,8,NOT WS_VISIBLE | 
+                    WS_DISABLED
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,5,0,0
+ PRODUCTVERSION 0,5,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "NUPT\0"
+            VALUE "FileDescription", "LanTran 局域网多功能数据传输器\0"
+            VALUE "FileVersion", "0, 5, 0, 0\0"
+            VALUE "InternalName", "LanTran\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2008 - 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "LanTran.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "LanTran 局域网多功能数据传输器\0"
+            VALUE "ProductVersion", "0, 5, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_LANTRAN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 340
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 298
+    END
+
+    IDD_DIALOG_FILETRAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_DIALOG_SAFETRAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_DIALOG_ANTIVIRUS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_DIALOG_CHAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_DIALOG_PHONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BKBUTTON            BITMAP  DISCARDABLE     "res\\按钮.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 LanTran(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 通信端口初始化失败。"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\LanTran.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

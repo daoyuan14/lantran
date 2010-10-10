@@ -1,0 +1,10 @@
+                        LanTran
+A Full Featured File Transfer Tool For Local Area Networks
+
+It is my first large project during my college life, so I value it very much. Because of nervous time, I programmed day and night with my partner. That's really a hard but happy time, I like it:-) Secure, Simple and Fast are this project's principle! It has the following main features:
+
+1. Design and implement a protocol for displaying current users in a LAN dynamically, which is similar to IP Messenger's protocol. So it is serverless, every user just has a client.
+2. Simple encrypted transmission! At that time, I didn't fully understand the encryption. In the future, I will add the feature of PKI.
+3. Auto detecting viruses as soon as you finish receiving files.
+
+Homepage: http://code.google.com/p/lantran/
